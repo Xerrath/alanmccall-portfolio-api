@@ -8,7 +8,7 @@ from marshmallow import fields
 from flask_cors import CORS
 from config import Config
 from datetime import datetime, timedelta
-from sqlalchemy import Sequence, Text, ForeignKey, LargeBinary, create_engine
+from sqlalchemy import Sequence, Text, ForeignKey, LargeBinary
 from sqlalchemy.orm import relationship
 from functools import wraps
 from flask_bcrypt import Bcrypt, generate_password_hash, check_password_hash
@@ -20,7 +20,7 @@ import os
 
 app = Flask(__name__)
 app.config.from_object(Config)
-app.config['SQLALCHEMY_DATABASE_URI'] = 'postgres://qcbcnrbhulehyi:c355f1b32340ef3d79a76e5d3e762aed70541c7ef57b8c6a0e045533f7e95106@ec2-3-230-122-20.compute-1.amazonaws.com:5432/dgo054b79rigd'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://postgres:D21Snoopy!!@localhost:5432/portfolio-db'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 bcrypt = Bcrypt(app)
 CORS(app)
