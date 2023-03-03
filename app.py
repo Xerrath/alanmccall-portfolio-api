@@ -13,6 +13,7 @@ from sqlalchemy.orm import relationship
 from functools import wraps
 from flask_bcrypt import Bcrypt, generate_password_hash, check_password_hash
 from dotenv import load_dotenv
+from sqlalchemy.dialects.postgresql import dialect
 import base64
 import bleach
 import jwt
