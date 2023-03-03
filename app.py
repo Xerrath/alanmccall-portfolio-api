@@ -8,12 +8,11 @@ from marshmallow import fields
 from flask_cors import CORS
 from config import Config
 from datetime import datetime, timedelta
-from sqlalchemy import Sequence, Text, ForeignKey, LargeBinary
+from sqlalchemy import Sequence, Text, ForeignKey, LargeBinary, create_engine
 from sqlalchemy.orm import relationship
 from functools import wraps
 from flask_bcrypt import Bcrypt, generate_password_hash, check_password_hash
 from dotenv import load_dotenv
-from sqlalchemy.dialects.postgresql import dialect
 import base64
 import bleach
 import jwt
@@ -27,6 +26,8 @@ bcrypt = Bcrypt(app)
 CORS(app)
 db = SQLAlchemy(app)
 ma = Marshmallow(app)
+
+engine = create_engine(app.config['SQLALCHEMY_DATABASE_URI'])
 
 # directory = 'https://127.0.0.1:5000'
 
