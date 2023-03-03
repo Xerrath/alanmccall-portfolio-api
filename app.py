@@ -18,10 +18,6 @@ import bleach
 import jwt
 import os
 
-import logging
-logging.basicConfig()
-logging.getLogger('sqlalchemy.engine').setLevel(logging.INFO)
-
 app = Flask(__name__)
 app.config.from_object(Config)
 app.config['SQLALCHEMY_DATABASE_URI'] = 'postgres://qcbcnrbhulehyi:c355f1b32340ef3d79a76e5d3e762aed70541c7ef57b8c6a0e045533f7e95106@ec2-3-230-122-20.compute-1.amazonaws.com:5432/dgo054b79rigd'
@@ -30,8 +26,6 @@ bcrypt = Bcrypt(app)
 CORS(app)
 db = SQLAlchemy(app)
 ma = Marshmallow(app)
-
-engine = create_engine(app.config['SQLALCHEMY_DATABASE_URI'])
 
 # directory = 'https://127.0.0.1:5000'
 
