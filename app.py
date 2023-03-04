@@ -205,9 +205,9 @@ testimonial_schema = TestimonialSchema()
 multiple_testimonial_schema = TestimonialSchema(many=True)
 
 
-def create_tables():
-    with app.app_context():
-        db.create_all()
+# def create_tables():
+#     with app.app_context():
+#         db.create_all()
 
 # --------------------------------
 # Settings (headers, or middleware)
@@ -956,5 +956,5 @@ def verifyAdmin():
 
 
 if __name__ == '__main__':
-    create_tables()
+    # create_tables()
     app.run(debug=True)
