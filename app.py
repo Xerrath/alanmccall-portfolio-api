@@ -255,7 +255,7 @@ def set_headers_delete(response):
 def get_all_admin_users():
     all_admin_users = db.session.query(AdminUser).all()
 
-    response = jsonify(multiple_admin_user_schema(all_admin_users))
+    response = jsonify(multiple_admin_user_schema.dump(all_admin_users))
 
     return set_headers_get(response)
 
