@@ -20,7 +20,7 @@ import os
 
 app = Flask(__name__)
 app.config.from_object(Config)
-app.config['SQLALCHEMY_DATABASE_URI'] = 'postgres://lwwvhultfcjhup:4aa3d0683c12539243cad759edf4806fe0d33bcba55e10072a5b51e9c9364020@ec2-52-5-110-35.compute-1.amazonaws.com:5432/d4vgordafa2qka'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'postgres://ovdwtuavblbwhs:9edc37ed4894a783e4a9211c43108c6ab4cc6beeca27fcffe406a1ee2017c47b@ec2-18-214-134-226.compute-1.amazonaws.com:5432/dfmbb4gvddnpdu'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 bcrypt = Bcrypt(app)
 CORS(app)
